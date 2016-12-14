@@ -1,0 +1,22 @@
+{
+  "name": "node-config-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wert2all/node-config-reader.git"
+  },
+  "author": "wert2all <wert2all@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wert2all/node-config-reader/issues"
+  },
+  "homepage": "https://github.com/wert2all/node-config-reader#readme",
+  "dependencies": {
+    "node.extend": "^1.1.6"
+  }
+}
