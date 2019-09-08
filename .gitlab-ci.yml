@@ -1,0 +1,29 @@
+image: node:latest
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm set registry "http://rpm.kiev.ua:4873"
+    - npm config set //rpm.kiev.ua:4873/:_authToken $NPM_AUTH_TOKEN
+    - npm install
+
+testing_testing:
+  stage: test
+  script: npm test
+
+deploy_prod:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+    - npm config set //rpm.kiev.ua:4873/:_authToken $NPM_AUTH_TOKEN
+    - npm publish
+  except:
+    - master
